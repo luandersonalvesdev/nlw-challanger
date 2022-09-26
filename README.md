@@ -1,4 +1,4 @@
-># NLW E-Sports Challanger
+># NLW E-Sports Challenger
 
 ![preview](./.github/preview.png)
 
