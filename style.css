@@ -1,0 +1,184 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    list-style: none;
+}
+
+body {
+    background-image: url(./imgs/background.jpg);
+    background-position: left top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    background-color: #18171E;
+    color: white;
+    font-family: 'Overpass';
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 80%;
+    justify-content: center;
+    gap: 25px;
+}
+
+header section{
+    text-align: end;
+}
+
+header .container{
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    background-image: linear-gradient(90deg, #e0efde, #e0a890, #6564db);
+    border-radius: 50%;
+    display: flex;
+    padding: 5px;
+
+    justify-content: center;
+}
+
+header div img{
+    width: 140px;
+    border-radius: 50%;
+}
+
+header .container-text{
+    width: auto;
+}
+
+header h1, h2, p{
+    opacity: .9;
+}
+
+header h1{
+    margin-top: 20px;
+    margin-bottom: 9px;
+    font-size:35px;
+}
+
+header h2{
+    font-size: 20px;
+}
+
+header p{
+    font-size: 14px;
+}
+
+
+
+
+main .container{
+    margin: 0 auto 50px auto;
+    width: 80%;
+    background-image: linear-gradient(180deg, #e0efde, #e0a890, #6564db);
+    padding-left: 5px;
+    border-radius: 10px;
+}
+
+main .container section{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: #0B0A0D;
+    padding: 10px 20px;
+}
+
+main .container section h2{
+    margin-bottom: 2px;
+    padding-top: 5px;
+}
+
+main .container section p{
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+main .container section ul{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+main ul li img{
+    width: 90px;
+    border-radius: 8px;
+    transition: transform .3s;
+}
+
+footer{
+    background-color: white;
+    color: black;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    padding: 20px;
+}
+
+footer p{
+    margin-top: 10px;
+}
+
+footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* EFEITO */
+main ul li img:hover{
+    transform: translateY(-10px);
+}
+
+
+
+/* ANIMATION */
+main .container{
+    animation: toRight 1s backwards;
+}
+
+main .container:nth-child(1){
+    animation-delay: .2s;
+}
+
+main .container:nth-child(2){
+    animation-delay: .4s;
+}
+
+@keyframes toRight{
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+header{
+    animation: showUp 1s .1s backwards;
+}
+
+@keyframes showUp {
+    from{
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
